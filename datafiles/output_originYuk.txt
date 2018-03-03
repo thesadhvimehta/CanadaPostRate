@@ -1,0 +1,25 @@
+Currently inY1A5K4
+HTTP Response Status: 200 OK
+Service Name: Expedited Parcel
+Price: $21.64
+
+Service Name: Priority
+Price: $39.33
+
+Service Name: Regular Parcel
+Price: $21.64
+
+Service Name: Xpresspost
+Price: $25.45
+
+Currently inX0A0H0
+HTTP Response Status: 200 OK
+Service Name: Expedited Parcel
+Price: $19.61
+
+Service Name: Regular Parcel
+Price: $19.61
+
+Service Name: Xpresspost
+Price: $23.03
+
