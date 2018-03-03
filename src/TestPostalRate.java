@@ -73,7 +73,7 @@ public class TestPostalRate {
 	@Test
 	public void postalCode_Invalid_T005() {
 		String expected = "Postal code(s) is invalid";
-		String args[] = new String[] { "000000", "000000", "3", "4", "5", "6", "seven" };
+		String args[] = new String[] { "Z9w6c3", "h9w6c3", "3", "4", "5", "6", "seven" };
 
 		pr.main(args);
 		assertEquals(expected, outContent.toString());

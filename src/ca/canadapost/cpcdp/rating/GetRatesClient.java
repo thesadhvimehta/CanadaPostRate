@@ -70,10 +70,10 @@ public class GetRatesClient {
 		
 		String[] pcArr = {"H9W6C3", "M6J1H7", "V6T1Z4", "T6G2R3", "B3H4R2", "S7N5E8", "R3T2N2", "A1C5S7", "E2L4L5", "C1A4P3",
 				"X0E0T0", "Y1A5K4", "X0A0H0"};
-		PrintStream out = new PrintStream(new FileOutputStream("output_originBC.txt"));
+		PrintStream out = new PrintStream(new FileOutputStream("datafiles/output_originBC.txt"));
 		System.setOut(out);
 		MailingScenario.ParcelCharacteristics parcelCharacteristics = new MailingScenario.ParcelCharacteristics();
-		for(int i = 1; i < pcArr.length; i++){
+		for(int i = 2; i < pcArr.length; i++){
 			System.out.println("Currently in" + pcArr[i]);
 				parcelCharacteristics.setWeight(new BigDecimal(10));
 				mailingScenario.setParcelCharacteristics(parcelCharacteristics);

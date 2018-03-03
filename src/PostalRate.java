@@ -79,7 +79,7 @@ public class PostalRate {
 	}
 
 	private static boolean isValidPostalCode(String pc) {
-		String regex = "^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]?[0-9][A-Z][0-9]$";
+		String regex = "^(?!.*[DFIOQU])[A-VXY][0-9][A-Z][0-9][A-Z][0-9]$";
 		Pattern pattern = Pattern.compile(regex);
 
 		if (pc.length() != 6) {
