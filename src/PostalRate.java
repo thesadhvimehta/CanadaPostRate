@@ -1,11 +1,15 @@
+import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PostalRate {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		float length;
 		float width;
@@ -22,9 +26,6 @@ public class PostalRate {
 			return;
 		}
 		
-	
-		
-		
 		else {
 
 			try {
@@ -38,10 +39,6 @@ public class PostalRate {
 				return;
 			}
 		
-	
-			
-		
-
 			from = args[0];
 			to = args[1];
 			
@@ -83,6 +80,23 @@ public class PostalRate {
 				return;
 			}
 			
+			
+			//all the dimensions were ok
+			float total = calcPostalRate(from, to, weight);
+			
+			String postType = args[6];
+			if (postType.equals("Xpress")) {
+				total += 5;
+			}
+			else if (postType.equals("Priority")) {
+				total += 10;
+			}
+			
+			BigDecimal newtotal = round(total, 2);
+			System.out.print("Price is: " + newtotal.toString() + "$");
+			
+			
+			
 		}
 
 	}
@@ -103,5 +117,58 @@ public class PostalRate {
 
 		return true;
 	}
+	
+	private static float calcPostalRate(String from, String to, float weight){
+		BufferedReader br = null;
+		float price = 0;
+		char fromSearch = Character.toUpperCase(from.charAt(0));
+		char toSearch = Character.toUpperCase(to.charAt(0));
+		
+		//from qc
+		if(fromSearch == 'G'|| fromSearch == 'J'){
+			fromSearch = 'H';
+		}
+		//from ont
+		else if(fromSearch == 'K' || fromSearch == 'L' || fromSearch == 'N' || fromSearch == 'P' ){
+			fromSearch = 'M';
+		}
+		//to qc
+		if(toSearch == 'G' || toSearch == 'J' ) {
+			toSearch = 'H';
+		}
+		//to ont
+		else if(toSearch == 'K' || toSearch == 'L' || toSearch == 'N' || toSearch == 'P') {
+			toSearch = 'M';
+		}
+
+		try {
+			br = new BufferedReader(new FileReader("src/data.csv"));
+			String line = "";
+			while ((line = br.readLine()) != null) {
+                // use comma as separator
+                String[] entry = line.split(", ");
+                if(entry[0].charAt(0) == fromSearch){
+                	if(entry[1].charAt(0) == toSearch){
+                		return (float) (weight*Float.valueOf(entry[2]));
+                	}
+                }
+
+            }
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return price;
+	}
+	
+	public static BigDecimal round(float d, int decimalPlace) {
+        BigDecimal bd = new BigDecimal(Float.toString(d));
+        bd = bd.setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);
+        return bd;
+    }
 
 }

@@ -195,133 +195,133 @@ public class TestPostalRate {
 	
 	
 	
-//	
-//	@Test
-//	public void post_QC_AB_3kg_xpress_T019() {
-//		String expected = "Price is: 10.32$";
-//		String args[] = new String[] { "H9W6C3", "T6G2R3", "15", "3", "100", "3", "Xpress" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_AB_3kg_priority_T020() {
-//		String expected = "Price is: 15.32$";
-//		String args[] = new String[] { "H9W6C3", "T6G2R3", "20", "100", "3", "3", "Priority" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_BC_5dot4kg_T021() {
-//		String expected = "Price is: 9.3$";
-//		String args[] = new String[] { "H9W6C3", "V6T1Z4", "10", "1.7", "10", "5.4", "Regular"};
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void  post_QC_MB_29kg_T022() {
-//		String expected = "Price is: 53.27$";
-//		String args[] = new String[] { "H9W6C3", "R3T2N2", "20", "10", "100", "29", "Regular"};
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//
-//	
-//	@Test
-//	public void post_QC_NB_21kg_T023() {
-//		String expected = "Price is: 25.30$";
-//		String args[] = new String[] { "H9W6C3", "E2L4L5", "30", "20", "90", "21", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_NL_0dot499kg_T024() {
-//		String expected = "Price is: 1.10$";
-//		String args[] = new String[] { "H9W6C3", "A1C5S7", "22", "22", "90", "0.499", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_NS_19dot9kg_T025() {
-//		String expected = "Price is: 42.92$";
-//		String args[] = new String[] { "H9W6C3", "B3H4R2", "33", "30", "30", "19.9", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_BC_10kg_T026() {
-//		String expected = "Price is: 17.23$";
-//		String args[] = new String[] { "H9W6C3", "V6T1Z4", "19", "25", "25", "10", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_NT_3dot6kg_T027() {
-//		String expected = "Price is: 12.06$";
-//		String args[] = new String[] { "H9W6C3", "X0A0H0", "15", "30", "30", "3.6", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_ON_5dot9kg_T028() {
-//		String expected = "Price is: 10.84$";
-//		String args[] = new String[] { "H9W6C3", "M6J1H7", "17", "40", "40", "5.9", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_SK_23dot5kg_T029() {
-//		String expected = "Price is: 44.22$";
-//		String args[] = new String[] { "H9W6C3", "H9W6C3", "30", "50", "60", "22.6", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_SK_23dot5kg_T030() {
-//		String expected = "Price is: 44.02$";
-//		String args[] = new String[] { "H9W6C3", "S7N5E8", "60", "10", "10", "23.5", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_YT_17dot3kg_T031() {
-//		String expected = "Price is: 37.44$";
-//		String args[] = new String[] { "H9W6C3", "Y1A5K4", "40", "20", "20", "17.3", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
-//	@Test
-//	public void post_QC_PE_6dot9kg_T032() {
-//		String expected = "Price is: 14.88$";
-//		String args[] = new String[] { "H9W6C3", "C1A4P3", "35", "50", "50", "6.9", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
-//	
+	
+	@Test
+	public void post_QC_AB_3kg_xpress_T019() {
+		String expected = "Price is: 10.32$";
+		String args[] = new String[] { "H9W6C3", "T6G2R3", "15", "3", "100", "3", "Xpress" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_AB_3kg_priority_T020() {
+		String expected = "Price is: 15.32$";
+		String args[] = new String[] { "H9W6C3", "T6G2R3", "20", "100", "3", "3", "Priority" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_BC_5dot4kg_T021() {
+		String expected = "Price is: 9.30$";
+		String args[] = new String[] { "H9W6C3", "V6T1Z4", "10", "1.7", "10", "5.4", "Regular"};
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void  post_QC_MB_29kg_T022() {
+		String expected = "Price is: 54.32$";
+		String args[] = new String[] { "H9W6C3", "R3T2N2", "20", "10", "100", "29", "Regular"};
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+
+	
+	@Test
+	public void post_QC_NB_21kg_T023() {
+		String expected = "Price is: 45.30$";
+		String args[] = new String[] { "H9W6C3", "E2L4L5", "30", "20", "90", "21", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_NL_0dot499kg_T024() {
+		String expected = "Price is: 1.10$";
+		String args[] = new String[] { "H9W6C3", "A1C5S7", "22", "22", "90", "0.499", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_NS_19dot9kg_T025() {
+		String expected = "Price is: 42.92$";
+		String args[] = new String[] { "H9W6C3", "B3H4R2", "33", "30", "30", "19.9", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_BC_10kg_T026() {
+		String expected = "Price is: 17.23$";
+		String args[] = new String[] { "H9W6C3", "V6T1Z4", "19", "25", "25", "10", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_NT_3dot6kg_T027() {
+		String expected = "Price is: 12.06$";
+		String args[] = new String[] { "H9W6C3", "X0A0H0", "15", "30", "30", "3.6", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_ON_5dot9kg_T028() {
+		String expected = "Price is: 10.84$";
+		String args[] = new String[] { "H9W6C3", "M6J1H7", "17", "40", "40", "5.9", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_SK_23dot5kg_T029() {
+		String expected = "Price is: 42.22$";
+		String args[] = new String[] { "H9W6C3", "H9W6C3", "30", "50", "60", "22.6", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_SK_23dot5kg_T030() {
+		String expected = "Price is: 44.02$";
+		String args[] = new String[] { "H9W6C3", "S7N5E8", "60", "10", "10", "23.5", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_YT_17dot3kg_T031() {
+		String expected = "Price is: 37.44$";
+		String args[] = new String[] { "H9W6C3", "Y1A5K4", "40", "20", "20", "17.3", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
+	@Test
+	public void post_QC_PE_6dot9kg_T032() {
+		String expected = "Price is: 14.88$";
+		String args[] = new String[] { "H9W6C3", "C1A4P3", "35", "50", "50", "6.9", "Regular" };
+
+		pr.main(args);
+		assertEquals(expected, outContent.toString());
+	}
+	
 	
 }
