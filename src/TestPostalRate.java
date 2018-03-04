@@ -98,15 +98,15 @@ public class TestPostalRate {
 
 	}
 
-//	@Test
-//	@deprecated
-//	public void weight_is0_T008() {
-//		String expected = "weight has to be between 0 and 30 kg";
-//		String args[] = new String[] { "A8A8A8", "A8A8A8", "3", "4", "5", "0", "Regular" };
-//
-//		pr.main(args);
-//		assertEquals(expected, outContent.toString());
-//	}
+	// @Test
+	// @deprecated
+	// public void weight_is0_T008() {
+	// String expected = "weight has to be between 0 and 30 kg";
+	// String args[] = new String[] { "A8A8A8", "A8A8A8", "3", "4", "5", "0", "Regular" };
+	//
+	// pr.main(args);
+	// assertEquals(expected, outContent.toString());
+	// }
 
 	@Test
 	public void weight_greater30_T009() {
@@ -125,7 +125,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void length_out_of_range_high_T011() {
 		String expected = "length should be between 10cm and 200cm";
@@ -134,7 +134,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void width_out_of_range_high_T012() {
 		String expected = "width should be between 1.7cm and 278cm";
@@ -143,7 +143,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void width_out_of_range_low_T013() {
 		String expected = "width should be between 1.7cm and 278cm";
@@ -152,7 +152,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void height_out_of_range_low_T014() {
 		String expected = "height should be between 1cm and 275.6cm";
@@ -161,7 +161,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void height_out_of_range_high_T015() {
 		String expected = "height should be between 1cm and 275.6cm";
@@ -170,7 +170,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void girth_out_of_range_high_T016() {
 		String expected = "Girth is out of bounds";
@@ -179,10 +179,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
-	
-	
-	
+
 	@Test
 	public void post_QC_AB_3kg_regular_T018() {
 		String expected = "Price is: 5.32$";
@@ -191,11 +188,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
-	
-	
-	
-	
+
 	@Test
 	public void post_QC_AB_3kg_xpress_T019() {
 		String expected = "Price is: 10.32$";
@@ -204,7 +197,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_AB_3kg_priority_T020() {
 		String expected = "Price is: 15.32$";
@@ -213,26 +206,25 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_BC_5dot4kg_T021() {
 		String expected = "Price is: 9.30$";
-		String args[] = new String[] { "H9W6C3", "V6T1Z4", "10", "1.7", "10", "5.4", "Regular"};
+		String args[] = new String[] { "H9W6C3", "V6T1Z4", "10", "1.7", "10", "5.4", "Regular" };
 
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
-	public void  post_QC_MB_29kg_T022() {
+	public void post_QC_MB_29kg_T022() {
 		String expected = "Price is: 54.32$";
-		String args[] = new String[] { "H9W6C3", "R3T2N2", "20", "10", "100", "29", "Regular"};
+		String args[] = new String[] { "H9W6C3", "R3T2N2", "20", "10", "100", "29", "Regular" };
 
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
 
-	
 	@Test
 	public void post_QC_NB_21kg_T023() {
 		String expected = "Price is: 45.30$";
@@ -241,7 +233,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_NL_0dot499kg_T024() {
 		String expected = "Price is: 1.10$";
@@ -250,7 +242,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_NS_19dot9kg_T025() {
 		String expected = "Price is: 42.92$";
@@ -259,7 +251,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_BC_10kg_T026() {
 		String expected = "Price is: 17.23$";
@@ -268,7 +260,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_NT_3dot6kg_T027() {
 		String expected = "Price is: 12.06$";
@@ -277,7 +269,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_ON_5dot9kg_T028() {
 		String expected = "Price is: 10.84$";
@@ -286,7 +278,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_SK_23dot5kg_T029() {
 		String expected = "Price is: 42.22$";
@@ -295,7 +287,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_SK_23dot5kg_T030() {
 		String expected = "Price is: 44.02$";
@@ -304,7 +296,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_YT_17dot3kg_T031() {
 		String expected = "Price is: 37.44$";
@@ -313,7 +305,7 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
+
 	@Test
 	public void post_QC_PE_6dot9kg_T032() {
 		String expected = "Price is: 14.88$";
@@ -322,6 +314,5 @@ public class TestPostalRate {
 		pr.main(args);
 		assertEquals(expected, outContent.toString());
 	}
-	
-	
+
 }
