@@ -15,10 +15,10 @@ public class PostalRate {
 		float width;
 		float height;
 		float weight;
-		float girth;
 		String from;
 		String to;
 
+		//not enough arguments
 		if (args == null || args.length != 7) {
 			System.out
 					.print("Usage: PostalRate from[postal code] to[postal code] length[cm] width[cm] height[cm] weight[kg] postType[Regular, Xpress, Priority]"
@@ -26,8 +26,10 @@ public class PostalRate {
 			return;
 		}
 		
+		//enough arguments
 		else {
 
+			//see if the values are valid
 			try {
 				length = Float.valueOf(args[2]);
 				width = Float.valueOf(args[3]);
@@ -42,44 +44,21 @@ public class PostalRate {
 			from = args[0];
 			to = args[1];
 			
+			//check for valid postal code
 			if (!isValidPostalCode(from) || !isValidPostalCode(to)) {
 				System.out.print("Postal code(s) is invalid");
 				return;
 			}
 			
-			
+			//check for valid postType
 			if (!(args[6].equals("Regular") || args[6].equals("Xpress") || args[6].equals("Priority"))) {
 				System.out.print("postType should be [Regular, Xpress, Priority]");
 				return;
 			}
-			
-			if (weight <= 0 || weight > 30) {
-				System.out.print("weight has to be between 0 and 30 kg");
+			//check for valid dimensions
+			if (!isDimensionsValid(weight, length, height, width)) {
 				return;
 			}
-			
-			if (length < 10 || length > 200) {
-				System.out.print("length should be between 10cm and 200cm");
-				return;
-			}
-			
-			if (width < 1.7 || width > 278) {
-				System.out.print("width should be between 1.7cm and 278cm");
-				return;
-			}
-			
-			if (height < 1 || height > 275.6) {
-				System.out.print("height should be between 1cm and 275.6cm");
-				return;
-			}
-			
-			girth = (float) (height*2.0 + width*2.0);
-			
-			if (length + girth > 300) {
-				System.out.print("Girth is out of bounds");
-				return;
-			}
-			
 			
 			//all the dimensions were ok
 			float total = calcPostalRate(from, to, weight);
@@ -101,6 +80,37 @@ public class PostalRate {
 
 	}
 
+	private static boolean isDimensionsValid(float weight, float length, float height, float width) {
+		if (weight <= 0 || weight > 30) {
+			System.out.print("weight has to be between 0 and 30 kg");
+			return false;
+		}
+		
+		if (length < 10 || length > 200) {
+			System.out.print("length should be between 10cm and 200cm");
+			return false;
+		}
+		
+		if (width < 1.7 || width > 278) {
+			System.out.print("width should be between 1.7cm and 278cm");
+			return false;
+		}
+		
+		if (height < 1 || height > 275.6) {
+			System.out.print("height should be between 1cm and 275.6cm");
+			return false;
+		}
+		
+		float girth = (float) (height*2.0 + width*2.0);
+		
+		if (length + girth > 300) {
+			System.out.print("Girth is out of bounds");
+			return false ;
+		}
+		
+		return true;
+	}
+	
 	private static boolean isValidPostalCode(String pc) {
 		String regex = "^(?!.*[DFIOQUdfioqu])[A-Va-vXYxy][0-9][A-Za-z]?[0-9][A-Za-z][0-9]$";
 		Pattern pattern = Pattern.compile(regex);
