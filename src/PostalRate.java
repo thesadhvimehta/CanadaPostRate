@@ -51,7 +51,8 @@ public class PostalRate {
 			}
 
 			// check for valid postType
-			if (!(args[6].equals("Regular") || args[6].equals("Xpress") || args[6].equals("Priority"))) {
+			String postType = args[6].toUpperCase();
+			if (!(postType.equals("REGULAR") || postType.equals("XPRESS") || postType.equals("PRIORITY"))) {
 				System.out.print("postType should be [Regular, Xpress, Priority]");
 				return;
 			}
@@ -63,11 +64,10 @@ public class PostalRate {
 			// all the dimensions were ok
 			float total = calcPostalRate(from, to, weight);
 
-			String postType = args[6];
-			if (postType.equals("Xpress")) {
+			if (postType.equals("XPRESS")) {
 				total += 5;
 			}
-			else if (postType.equals("Priority")) {
+			else if (postType.equals("PRIORITY")) {
 				total += 10;
 			}
 
