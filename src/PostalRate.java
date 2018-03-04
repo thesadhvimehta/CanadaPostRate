@@ -21,6 +21,10 @@ public class PostalRate {
 							+ "\n" + "Should have 7 arguments");
 			return;
 		}
+		
+	
+		
+		
 		else {
 
 			try {
@@ -33,6 +37,10 @@ public class PostalRate {
 				System.out.print("dimensions should be numerical");
 				return;
 			}
+		
+	
+			
+		
 
 			from = args[0];
 			to = args[1];
@@ -41,6 +49,7 @@ public class PostalRate {
 				System.out.print("Postal code(s) is invalid");
 				return;
 			}
+			
 			
 			if (!(args[6].equals("Regular") || args[6].equals("Xpress") || args[6].equals("Priority"))) {
 				System.out.print("postType should be [Regular, Xpress, Priority]");
@@ -79,7 +88,7 @@ public class PostalRate {
 	}
 
 	private static boolean isValidPostalCode(String pc) {
-		String regex = "^(?!.*[DFIOQU])[A-VXY][0-9][A-Z][0-9][A-Z][0-9]$";
+		String regex = "^(?!.*[DFIOQUdfioqu])[A-Va-vXYxy][0-9][A-Za-z]?[0-9][A-Za-z][0-9]$";
 		Pattern pattern = Pattern.compile(regex);
 
 		if (pc.length() != 6) {
