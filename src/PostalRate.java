@@ -150,7 +150,7 @@ public class PostalRate {
 		}
 
 		try {
-			br = new BufferedReader(new FileReader("data.csv"));
+			br = new BufferedReader(new FileReader("src/data.csv"));
 			String line = "";
 			while ((line = br.readLine()) != null) {
 				// use comma as separator
