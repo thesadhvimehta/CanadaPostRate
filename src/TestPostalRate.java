@@ -182,7 +182,7 @@ public class TestPostalRate {
 	
 	@Test
 	public void postalcode_lowercase_T017() {
-		String expected = "Postal code is invalid";
+		String expected = "Postal code(s) is invalid";
 		String args[] = new String[] { "h9W6c3", "h9W6c3", "200", "250", "275", "25", "Regular" };
 
 		pr.main(args);
